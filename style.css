@@ -68,7 +68,7 @@ body {
 
 .search-bar .searchbar:hover, .search-bar .searchbar:focus {
   outline: none;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   -webkit-box-shadow: var(--clr-accent) 0px 3px;
           box-shadow: var(--clr-accent) 0px 3px;
 }
