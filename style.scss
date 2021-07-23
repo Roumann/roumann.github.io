@@ -1,0 +1,163 @@
+
+:root{
+ --clr-background: #f2f2f2;
+ --clr-main: #333;
+ --clr-accent: #3600fc;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    zoom: 0;
+}
+        
+
+body{
+    font-family: sans-serif;
+    background-color: var(--clr-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.container{
+    padding: 2.5rem;
+    box-shadow: var(--clr-accent) 5px 5px;
+    max-width: 90%;
+    color: var(--clr-main);
+    border: 5px solid var(--clr-main);
+    
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    .searchbar{
+        background-color: transparent;
+        font-size: 1.5rem;
+        color: var(--clr-accent);
+        border: 2px solid var(--clr-main);
+        box-shadow: var(--clr-accent) 3px 3px;
+        transition: all 250ms ease-in-out;
+        height: 50px;
+
+        @media only screen and (max-width: 400px) {
+          width: 200px;
+        }
+    
+        &:hover,
+        &:focus
+        {
+            outline: none;
+            border: 3px solid transparent;
+            box-shadow: var(--clr-accent) 0px 3px;       
+            
+        }
+    }
+    
+    .SubmitBTN{
+        margin: 0.5em;
+        border: 2px solid var(--clr-main);
+        box-shadow: var(--clr-accent) 3px 3px;
+        background-color: transparent;
+        font-size: 1.2rem;
+        outline: none;
+        color: var(--clr-accent);
+        cursor: pointer;
+        transition: all 250ms ease-in-out;
+        width: 50px;
+        height: 50px;
+        &:hover,
+        &:focus
+        {
+            border: 2px solid transparent;
+            box-shadow: var(--clr-accent) 0px 3px;
+    
+        }
+    }
+    
+}
+
+
+.weather-city{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+
+    .weather{
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--clr-accent);
+
+    }
+
+    .city{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+}
+
+
+.more-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 1rem;
+    display: none;
+
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+    }
+   
+    .info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-basis: 0;
+        flex-grow: 1;
+        padding: 1rem;
+        
+    }
+
+    .info.border{
+        border-left: 1px solid var(--clr-main);
+        border-right: 1px solid var(--clr-main);
+
+        @media only screen and (max-width: 600px) {
+            border-left: none;
+            border-right: none;
+            border-top: 1px solid var(--clr-main);
+            border-bottom: 1px solid var(--clr-main);
+        }
+    }
+
+    .title{
+        font-size: 1.5rem;
+        font-weight: bold;
+        flex-grow: 1;
+        color: var(--clr-main);
+
+    }
+    
+    .value{
+        font-size: 1rem;
+        font-weight: bold;
+    
+    }
+
+
+}
+
+
+
